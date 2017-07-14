@@ -4,6 +4,7 @@ external parseJson : Js_json.t => array SharedTypes.typeItem =
   "Object.create" [@@bs.val];
 
 external tsUrl : string = "tsUrl" [@@bs.val];
+external tsId : string = "tsId" [@@bs.val];
 
 let headers =
   HeadersInit.makeWithArray [|
@@ -19,7 +20,7 @@ let data =
     then_ (
       fun typeSystemData => {
         let data = parseJson typeSystemData;
-        ReactDOMRe.renderToElementWithId <TypeSystem data /> "ts-explorer" |> resolve
+        ReactDOMRe.renderToElementWithId <TypeSystem data /> tsId |> resolve
       }
     )
   );
