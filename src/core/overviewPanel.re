@@ -27,7 +27,6 @@ let showRootInformation data =>
 let make
     ::description
     ::icon
-    ::interfaces
     ::superTypes
     ::propertyDetails
     ::root
@@ -43,7 +42,6 @@ let make
     | None =>
       <div className=quickOverviewCls>
         <div className=upperPanelCls>
-          <InterfacesView interfaces />
           <SuperTypesView superTypes />
         </div>
         <TypeDetails description icon root virtualType />

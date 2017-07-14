@@ -51,7 +51,6 @@ let make ::typeDescriptor=? ::propertyName ::onPropertyClick _children => {
           <OverviewPanel
             description=typeDescriptorValue##description
             icon=typeDescriptorValue##icon
-            interfaces=typeDescriptorValue##interfaces
             propertyDetails=(
               getPropertyDetails typeDescriptorValue propertyName ()
             )
